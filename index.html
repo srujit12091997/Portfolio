@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+
+  <nav id="desktop-nav">
+    <div class="logo">Srujit Varasala</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Srujit Varasala</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/Srujit.jpg" alt="Srujit Varasala profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Srujit Varasala</h1>
+      <p class="section__text__p2">Software Developer</p>
+
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('Srujit_Resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='#contact'">
+          Contact Info
+        </button>
+      </div>
+  
+      <div class="socials-container">
+        <img
+          src="./assets/linkedin.png"
+          alt="My LinkedIn profile"
+          class="icon"
+          onclick="location.href='https://www.linkedin.com/in/srujitvarasala/'"
+        />
+        <img
+          src="./assets/github.png"
+          alt="My GitHub profile"
+          class="icon"
+          onclick="location.href='https://github.com/srujit12091997'"
+        />
+      </div>
+      
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <p class="intro-paragraph"><strong>I’m a Software Developer with 4+ years of experience building scalable applications, developing backend systems, and automating data workflows using Python, Java, Spring Boot, and cloud tools like AWS and Docker.</strong></p>
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="about-containers">
+  
+          <div class="details-container">
+            <img
+              src="./assets/experience.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <h3>Experience</h3>
+            <p>4 years of Software Development</p>
+            <p>Software Engineering Intern, Full Stack | Local Grown Salads(Dec 2024 – Mar 2025)</p>
+            <p>Data Engineer | Jio Platform Limited(Jul 2020 – Dec 2022)</p>
+            <p>Software Developer intern(Aug 2019 – May 2020)</p>
+            <p>Full Stack Web Development intern | DLK Technologies (Nov 2018 -Dec 2018)</p>
+          </div>
+  
+          <div class="details-container">
+            <img
+              src="./assets/education2.png"
+              alt="Education icon"
+              class="icon"
+            />
+            <h3>Education</h3>
+            <p> Masters at New Jersey Institute of Technology (Jan 2022 - Dec 2024)<br />Bachelors at SRM University (2016-2020)</p>
+          </div>
+          <div class="details-container">
+            <img
+              src="./assets/checkmark.png"
+              alt="Checkmark icon"
+              class="icon"
+            />
+            <h3>Certificates</h3>
+            <p> The Web Developer Bootcamp 2025<br />AWS 2025 <br /> Microsoft AI skillset 2025</p>
+          </div>
+  
+        </div class = "text-cointainer">          
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrows icon" class="icon arrow" onclick="location.href='./#experience'">
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>React</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Springboot</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>TypeScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Node JS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Express JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>MongoDB</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>PostgresSQL</h3>
+                <p>Experience</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Git</h3>
+                <p>Experience</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>TypeScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Software Development</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Python</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Java</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>CI/CD</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>APIs</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>DSA</h3>
+                <p>Experience</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark2.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>AWS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrows icon" class="icon arrow" onclick="location.href='./#projects'">
+  </section>  
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+  
+    <div class="experience-details-container">
+      <div class = "about-containers">
+      <div class="details-container color-container">
+
+        <div class="article-container">
+          <img
+            src="./assets/project1.png"
+            alt="Project 1"
+            class="project-img "
+          />
+        </div>
+  
+        <h2 class="experience-sub-title project-title">House Prices Advanced Regression</h2>
+  
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/srujit12091997/House-Prices-Advanced-Regression'"
+          >
+            Github
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-details-container">
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/project2.png"
+            alt="Project 2"
+            class="project-img"
+          />
+        </div>
+  
+        <h2 class="experience-sub-title project-title">Online Farm Stand Platform</h2>
+  
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/srujit12091997/farm-stand'">
+            Github
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-details-container">
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/project3.png"
+            alt="Project 3"
+            class="project-img"
+          />
+        </div>
+  
+        <h2 class="experience-sub-title project-title">Yelp Camp web application</h2>
+  
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/srujit12091997/YelpCamp'">
+            Github
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <img src="./assets/arrow.png" alt="Arrows icon" class="icon arrow" onclick="location.href='./#experience'">
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+  
+    <div class="contact-info-upper-container">
+      
+      <div class="contact-info-container">
+        <img
+          src="./assets/email.png"
+          alt="Email icon"
+          class="icon contact-icon"
+        />
+        <p><a href="mailto:examplemail@gmail.com">srujit.v@gmail.com</a></p>
+      </div>
+  
+      <div class="contact-info-container">
+        <img
+          src="./assets/linkedin.png"
+          alt="LinkedIn icon"
+          class="icon contact-icon"
+        />
+        <p><a href="https://www.linkedin.com/in/srujitvarasala/">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img
+          src="./assets/phone2.png"
+          alt="Phone icon"
+          class="icon contact-icon phone-icon"
+        />
+        <p><a href="8622375382">8622375382</a></p>
+      </div>
+  
+    </div>
+  </section>
+  <footer>
+    <div class="nav-links-container">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  
+    <p>© 2025 Srujit Varasala. All Rights Reserved.</p>
+  </footer>
+ 
+  <script src="script.js"></script>
+</body>
+</html>

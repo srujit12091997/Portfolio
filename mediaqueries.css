@@ -1,0 +1,92 @@
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+
+  .about-containers {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+  }
+
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* General Section Spacing */
+  section {
+    margin: 2rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* About Section */
+  #about .section__text__p1,
+  #about .title,
+  #about p {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .about-details-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .about-containers {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .details-container {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  /* Contact Section Adjustments */
+  #contact {
+    margin: 2rem 1rem;
+    height: auto;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info-container {
+    margin: 1rem 0;
+  }
+
+  /* Footer Adjustments */
+  footer {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
