@@ -10,16 +10,31 @@
 <body>
 
   <nav id="desktop-nav">
-    <div class="logo">Srujit Varasala</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+  <div class="logo">Srujit Varasala</div>
+  <div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+      <li>
+  <label class="theme-toggle-wrapper" for="theme-switch">
+  <input type="checkbox" id="theme-switch" />
+  <span class="slider">
+    <span class="emoji" id="toggle-emoji">🌞</span>
+  </span>
+</label>
+
+</li>
+
+
+    </ul>
+  </div>
   </nav>
+
+
 
   <nav id="hamburger-nav">
     <div class="logo">Srujit Varasala</div>
@@ -30,10 +45,12 @@
         <span></span>
       </div>
       <ul class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+      <li><a href="#case-studies" onclick="toggleMenu()">Case Studies</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
       </ul>
     </div>
   </nav>
@@ -72,10 +89,10 @@
       
     </div>
   </section>
-  <section id="about">
+  <section id="about" class="fade-in-on-scroll">
     <p class="section__text__p1">Get To Know More</p>
     <h1 class="title">About Me</h1>
-    <p class="intro-paragraph"><strong>I’m a Software Developer with 4+ years of experience building scalable applications, developing backend systems, and automating data workflows using Python, Java, Spring Boot, and cloud tools like AWS and Docker.</strong></p>
+    <p class="intro-paragraph"><strong>Hi, I’m Srujit – a curious and driven Software Engineer with 4+ years of experience turning complex ideas into scalable backend systems, seamless APIs, and dynamic web apps. I thrive at the intersection of clean code and real-world impact, with hands-on expertise in Java, Python, Spring Boot, AWS, and modern DevOps. Whether I’m optimizing data pipelines, deploying microservices, or building intuitive UIs, I bring a builder’s mindset and a passion for continuous learning. I believe great software is crafted with purpose, tested with precision, and shipped with pride.</strong></p>
     <div class="section-container">
       <div class="about-details-container">
         <div class="about-containers">
@@ -88,9 +105,9 @@
             />
             <h3>Experience</h3>
             <p>4 years of Software Development</p>
-            <p>Software Engineering Intern, Full Stack | Local Grown Salads(Dec 2024 – Mar 2025)</p>
-            <p>Data Engineer | Jio Platform Limited(Jul 2020 – Dec 2022)</p>
-            <p>Software Developer intern(Aug 2019 – May 2020)</p>
+            <p>Software Engineering Intern, Full Stack | Local Grown Salads (Dec 2024 – Mar 2025)</p>
+            <p>Software Engineer | Jio Platform Limited(Jul 2020 – Dec 2022)</p>
+            <p>Software Developer intern(Feb 2019 – May 2020)</p>
             <p>Full Stack Web Development intern | DLK Technologies (Nov 2018 -Dec 2018)</p>
           </div>
   
@@ -101,7 +118,7 @@
               class="icon"
             />
             <h3>Education</h3>
-            <p> Masters at New Jersey Institute of Technology (Jan 2022 - Dec 2024)<br />Bachelors at SRM University (2016-2020)</p>
+            <p> Masters in computer science - New Jersey Institute of Technology (Jan 2023 - Dec 2024)<br />Bachelors in computer science - SRM University (2016-2020)</p>
           </div>
           <div class="details-container">
             <img
@@ -110,7 +127,7 @@
               class="icon"
             />
             <h3>Certificates</h3>
-            <p> The Web Developer Bootcamp 2025<br />AWS 2025 <br /> Microsoft AI skillset 2025</p>
+            <p>McKinsey.org Forward Learning 2025</p><p> The Web Developer Bootcamp 2025<br />AWS Cloud Practioner 2025 <br /> Microsoft AI skillset 2025</p>
           </div>
   
         </div class = "text-cointainer">          
@@ -118,229 +135,108 @@
     </div>
     <img src="./assets/arrow.png" alt="Arrows icon" class="icon arrow" onclick="location.href='./#experience'">
   </section>
-  <section id="experience">
+  <section id="experience" class="fade-in-on-scroll">
     <p class="section__text__p1">Explore My</p>
     <h1 class="title">Experience</h1>
     <div class="experience-details-container">
       <div class="about-containers">
+
         <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>HTML</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>CSS</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>JavaScript</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>React</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Springboot</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>TypeScript</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-          </div>
-        </div>
+  <h2 class="experience-sub-title">Local Grown Salads</h2>
+  <p><strong>Role:</strong> Full Stack Developer Intern (Dec 2024 – Mar 2025)</p>
+  <p><strong>Team:</strong> LGS Network Team</p>
+  <div class="highlights-grid">
+    <div class="highlight">🔐 Engineered JWT-based authentication system using Spring Boot and Firebase, ensuring secure user login and token handling across the app.</div>
+    <div class="highlight">👤 Developed modular, role-based onboarding UI with React to streamline new user registration, access control, and dashboard redirection.</div>
+    <div class="highlight">🔗 Integrated REST APIs with React frontend to enable real-time updates for user activity, data visualizations, and dynamic widgets.</div>
+    <div class="highlight">🚀 Set up CI/CD pipeline using Docker and GitHub Actions for smooth code deployment and automated testing across staging environments.</div>
+    <div class="highlight">🧪 Wrote unit tests in JUnit and frontend tests using Jest to maintain over 90% coverage and reduce regression bugs in future releases.</div>
+    <div class="highlight">📈 Collaborated with stakeholders to design a scalable backend structure, improving feature rollout time by 30% during sprint cycles.</div>
+  </div>
+</div>
+
+
         <div class="details-container">
-          <h2 class="experience-sub-title">Backend Development</h2>
-          <div class="article-container">
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Node JS</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Express JS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>MongoDB</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>PostgresSQL</h3>
-                <p>Experience</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Git</h3>
-                <p>Experience</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>TypeScript</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-          </div>
-        </div>
+  <h2 class="experience-sub-title">Reliance Jio Platforms Ltd.</h2>
+  <p><strong>Role:</strong> Software Engineer (Jul 2020 – Dec 2022)</p>
+  <p><strong>Team:</strong> JAMP(Jio Ads Management Platform)</p>
+  <div class="highlights-grid">
+    <div class="highlight">📍 Led backend development for JioXplor, a large-scale location intelligence platform using Python and Spark (Scala).</div>
+    <div class="highlight">🔄 Built real-time ETL pipelines with Apache Kafka and Spark to process and analyze massive geospatial datasets.</div>
+    <div class="highlight">🗂️ Developed automation scripts to streamline data ingestion workflows, reducing manual effort and boosting reliability.</div>
+    <div class="highlight">📊 Designed reporting modules using Pandas and SQL, delivering actionable insights to product and analytics teams.</div>
+    <div class="highlight">🧩 Participated across the SDLC: from requirement gathering and development to deployment and production support.</div>
+    <div class="highlight">🚦Improved system efficiency and fault tolerance by optimizing pipeline performance during peak IPL streaming loads.</div>
+  </div>
+</div>
+
         <div class="details-container">
-          <h2 class="experience-sub-title">Software Development</h2>
-          <div class="article-container">
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Python</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>Java</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>CI/CD</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>APIs</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>DSA</h3>
-                <p>Experience</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="./assets/checkmark2.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <div>
-                <h3>AWS</h3>
-                <p>Intermediate</p>
-              </div>
+  <h2 class="experience-sub-title">Techniki Services</h2>
+  <p><strong>Role:</strong> Software Developer Intern (Feb 2019 – May 2020)</p>
+  <p><strong>Team:</strong>Techniki Dev team</p>
+  <div class="highlights-grid">
+    <div class="highlight">🛠️ Developed Python-based web applications integrating Java REST APIs with React.js frontends.</div>
+    <div class="highlight">📋 Translated business requirements into full-stack features, delivering production-ready functionality on time.</div>
+    <div class="highlight">🔍 Integrated Selenium for automated testing, reducing manual QA time by 30% and improving bug detection rate.</div>
+    <div class="highlight">🔧 Maintained clean, modular code using version control (Git), code reviews, and Agile best practices.</div>
+    <div class="highlight">🧪 Actively participated in release testing, bug tracking, and defect resolution during sprint delivery cycles.</div>
+    <div class="highlight">🎯 Delivered features across planning, testing, deployment, and support stages, gaining strong end-to-end ownership.</div>
+  </div>
+</div>
+
             </article>
           </div>
         </div>
       </div>
     </div>
     <img src="./assets/arrow.png" alt="Arrows icon" class="icon arrow" onclick="location.href='./#projects'">
-  </section>  
-  <section id="projects">
+  </section>
+  
+  <section id="case-studies" class="fade-in-on-scroll">
+  <p class="section__text__p1">Behind the Code</p>
+  <h1 class="title">Case Studies</h1>
+
+  <div class="experience-details-container">
+    <div class="about-containers">
+
+      <!-- Case Study 1: LGS -->
+      <div class="details-container color-container">
+  <h2 class="experience-sub-title">Secure Authentication System</h2>
+  
+  <p><strong>Context:</strong> Local Grown Salads is a sustainability-focused startup producing fresh salads and vegetables in-house. They needed an internal web platform to help employees securely access role-based dashboards related to farming, logistics, and team operations.</p>
+
+  <p><strong>Problem:</strong> The company had no system in place to manage employee onboarding, access levels, or user authentication. They required a secure, scalable authentication and authorization solution that could grow alongside their cross-functional teams and operations.</p>
+
+  <p><strong>My Role:</strong> I led the entire development of the authentication system from scratch. Collaborating closely with cross-functional teams—including ops managers, engineers, and team leads—I mapped out roles and access flows. I designed a Lucidchart diagram to visualize the user journey and developed backend services using Java and Python.</p>
+
+  <p><strong>Solution:</strong> I built a secure login system using Spring Boot, Firebase Authentication, and JWT tokens. Role-based access was implemented to differentiate permissions between Managers and Employees. SQL was used for managing user metadata, while Firebase handled token validation. I also added API key functionality to support service integrations. To ensure reliability, I wrote test cases using JUnit and managed the build lifecycle and dependencies through Maven.</p>
+
+  <p><strong>Impact:</strong> This solution reduced employee onboarding time by 40% and significantly improved login security. It gave the company a scalable foundation for access control and ensured that each user saw only what they were meant to—boosting productivity and safeguarding data integrity.</p>
+</div>
+
+
+
+      <!-- Case Study 2: JioXplor -->
+      <div class="details-container color-container">
+  <h2 class="experience-sub-title">JioXplor: Real-Time Location Intelligence</h2>
+  
+  <p><strong>Context:</strong> Reliance Jio is India’s largest telecom service provider, offering digital connectivity to hundreds of millions. I contributed to JioXplor, a geospatial intelligence platform designed to track and analyze location-based user activity across the country in real-time.</p>
+
+  <p><strong>Problem:</strong> The team faced an enormous challenge: collecting and mapping high-volume geolocation data (latitude/longitude) from users across India and converting it into meaningful location insights. The process had to be fast, accurate, and scalable to power live business decisions and dashboards. The volume of data made traditional scraping and mapping methods inefficient, especially under real-time constraints.</p>
+
+  <p><strong>My Role:</strong> I was deeply involved in building the geospatial engine behind JioXplor. I wrote Python and Shell scripts to automate data ingestion, and developed Spark (Scala) jobs to process data in distributed batches. I also worked with GIS tools and external APIs including Google Maps, HERE Maps, and OpenStreetMap, where I handled reverse geocoding, location tagging, and rate-limiting challenges.</p>
+
+  <p><strong>Solution:</strong> To solve API rate limits and latency bottlenecks, I implemented multi-threaded request handling and orchestrated the process across multiple cloud VMs. I designed logic to throttle and retry failed requests efficiently. Processed data was mapped to Places of Interest (POIs), then stored in Akamai NetStorage and HDFS for redundancy. I queried location-tagged data using SQL to extract POI density and location-based trends. These insights were used by the business team for strategic decisions, including IPL 2022 customer engagement.</p>
+
+  <p><strong>Impact:</strong> My solution enabled accurate geospatial mapping across India at scale. The business team gained access to millions of POI insights and real-time location patterns. This significantly boosted the quality of user targeting, infrastructure planning, and event-based decision-making. The system became a key data source for location-driven strategy and was praised for its speed, accuracy, and extensibility.</p>
+</div>
+
+</section>
+
+
+
+
+  <section id="projects" class="fade-in-on-scroll">
     <p class="section__text__p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
   
@@ -373,49 +269,127 @@
       <div class="details-container color-container">
         <div class="article-container">
           <img
-            src="./assets/project2.png"
+            src="./assets/Wine.png"
             alt="Project 2"
             class="project-img"
           />
         </div>
   
-        <h2 class="experience-sub-title project-title">Online Farm Stand Platform</h2>
+        <h2 class="experience-sub-title project-title">Wine Quality Prediction System</h2>
   
         <div class="btn-container">
           <button
             class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/srujit12091997/farm-stand'">
+            onclick="location.href='https://github.com/srujit12091997/EC2Wine-Parallel-Wine-Quality-Engine'">
             Github
           </button>
         </div>
       </div>
     </div>
 
-    <div class="experience-details-container">
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img
-            src="./assets/project3.png"
-            alt="Project 3"
-            class="project-img"
-          />
-        </div>
-  
-        <h2 class="experience-sub-title project-title">Yelp Camp web application</h2>
-  
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/srujit12091997/YelpCamp'">
-            Github
-          </button>
-        </div>
+
+    <section id="skills" class="accordion-skills fade-in-on-scroll">
+  <p class="section__text__p1">What I Bring</p>
+  <h1 class="title">Skills</h1>
+
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <button class="accordion-header">🖼️ Frontend Skills</button>
+      <div class="accordion-body">
+        <h4>Languages & Frameworks</h4>
+        <span class="skill-badge">HTML5</span><span class="skill-badge">CSS3</span><span class="skill-badge">JavaScript (ES6+)</span><span class="skill-badge">TypeScript</span><span class="skill-badge">React.js</span>
+        <h4>UI Styling & State Management</h4>
+        <span class="skill-badge">TailwindCSS</span><span class="skill-badge">Bootstrap</span><span class="skill-badge">Material UI</span><span class="skill-badge">Redux</span><span class="skill-badge">Context API</span>
+        <h4>Testing & Performance</h4>
+        <span class="skill-badge">React Testing Library</span><span class="skill-badge">Playwright</span> <span class="skill-badge">Lazy Loading</span><span class="skill-badge">Code Splitting</span>
       </div>
     </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">⚙️ Backend Skills</button>
+      <div class="accordion-body">
+        <h4>Languages & Frameworks</h4>
+        <span class="skill-badge">Java</span><span class="skill-badge">Python</span><span class="skill-badge">Go</span><span class="skill-badge">Node.js</span><span class="skill-badge">Scala</span><span class="skill-badge">C++</span><span class="skill-badge">Spring Boot</span><span class="skill-badge">Express.js</span><span class="skill-badge">Django</span><span class="skill-badge">Flask</span>
+        <h4>APIs & Auth</h4>
+        <span class="skill-badge">REST</span><span class="skill-badge">GraphQL</span><span class="skill-badge">JWT</span><span class="skill-badge">OAuth2</span>
+        <h4>Real-Time & Async</h4>
+        <span class="skill-badge">WebSockets</span><span class="skill-badge">Kafka</span><span class="skill-badge">RabbitMQ</span><span class="skill-badge">Server-Sent Events</span>
+        <h4>Testing & Architecture</h4>
+        <span class="skill-badge">JUnit</span><span class="skill-badge">PyTest</span><span class="skill-badge">Postman</span><span class="skill-badge">Selenium</span><span class="skill-badge">Microservices</span>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">🛠️ Tools & DevOps</button>
+      <div class="accordion-body">
+        <h4>Containers & CI/CD</h4>
+        <span class="skill-badge">GitHub Actions</span><span class="skill-badge">Jenkins</span><span class="skill-badge">Git</span><span class="skill-badge">GitHub</span><span class="skill-badge">GitLab</span><span class="skill-badge">Docker</span><span class="skill-badge">Kubernetes</span>
+        <h4>Build Tools & Monitoring</h4>
+        <span class="skill-badge">Webpack</span><span class="skill-badge">Vite</span><span class="skill-badge">Maven</span><span class="skill-badge">Gradle</span>
+        <span class="skill-badge">Sentry</span><span class="skill-badge">Prometheus</span><span class="skill-badge">Grafana</span>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">☁️ Cloud Platforms</button>
+      <div class="accordion-body">
+        <h4>AWS</h4>
+        <span class="skill-badge">S3</span><span class="skill-badge">EC2</span><span class="skill-badge">Lambda</span><span class="skill-badge">API Gateway</span><span class="skill-badge">RDS</span><span class="skill-badge">ECS</span>
+        <h4>GCP</h4>
+        <span class="skill-badge">BigQuery</span><span class="skill-badge">Cloud Functions</span><span class="skill-badge">Firebase</span><span class="skill-badge">Pub/Sub</span>
+        
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">🗃️ Database</button>
+      <div class="accordion-body">
+        <h4>SQL</h4>
+        <span class="skill-badge">PostgreSQL</span><span class="skill-badge">MySQL</span><span class="skill-badge">SQL Server</span><span class="skill-badge">Oracle</span>
+        <h4>NoSQL & Graph</h4>
+        <span class="skill-badge">MongoDB</span><span class="skill-badge">Neo4j</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    
   </div>
     <img src="./assets/arrow.png" alt="Arrows icon" class="icon arrow" onclick="location.href='./#experience'">
   </section>
-  <section id="contact">
+
+<section id="publications">
+  <h2>📚 Publications</h2>
+  <div class="publication-card">
+    <h3>“ARDUINO BASED SYSTEM TO MONITOR THE PLANTS' HEALTH AND GROWTH USING WIRELESS SENSORS”</h3>
+    <p><strong>Authors:</strong> Srujit Varasala, Mrs. Angline, Naveen Reddy, Shaik Khadeer Basha</p>
+    <p><strong>Published in:</strong> Journal of Emerging Technologies and Innovative Research (JETIR), Volume 5, Issue 11, November 2018</p>
+    
+    <p><strong>Case Study:</strong></p>
+    <p>
+      In this research, we designed and implemented an IoT-based system using Arduino and wireless sensors to monitor the health and growth of plants in real-time. The system aims to address agricultural productivity challenges by enabling proactive plant care through data-driven insights.
+    </p>
+    <p>
+      The core functionality involved sensing nodes embedded in the soil, which captured key environmental metrics such as soil moisture, temperature, humidity, and even vibration patterns to detect larval activity. These nodes were powered by rechargeable batteries and communicated wirelessly with a base station using ZigBee protocol.
+    </p>
+    <p>
+      The base station aggregated the sensor data and relayed it to a mobile device via an Arduino processing unit. A dedicated mobile application then presented this data in a user-friendly format, allowing remote monitoring and timely alerts. This system could also automate irrigation based on moisture readings, enabling efficient resource usage and minimal manual intervention.
+    </p>
+    <p>
+      The solution is highly scalable and power-efficient, capable of supporting multiple sensors across larger agricultural fields. Its impact lies in reducing crop loss, improving food security, and making precision agriculture more accessible to small and medium-scale farmers.
+    </p>
+    
+    <a href="https://www.jetir.org/papers/JETIR1811003.pdf" target="_blank">🔗 View Full Paper</a>
+  </div>
+</section>
+
+
+
+
+  <section id="contact" class="fade-in-on-scroll">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
   
@@ -446,16 +420,21 @@
         />
         <p><a href="8622375382">8622375382</a></p>
       </div>
-  
     </div>
+    <div class="contact-message fade-in-on-scroll">
+    <p>Let’s build something awesome together.</p>
+    </div>
+
   </section>
   <footer>
     <div class="nav-links-container">
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact Me</a></li>
       </ul>
     </div>
   
@@ -463,5 +442,60 @@
   </footer>
  
   <script src="script.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("theme-toggle");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const savedTheme = localStorage.getItem("theme");
+
+      const setIcon = (isDark) => toggleBtn.textContent = isDark ? "☀️" : "🌙";
+
+      const initialDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+      if (initialDark) {
+        document.body.classList.add("dark");
+        setIcon(true);
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        const nowDark = document.body.classList.contains("dark");
+        localStorage.setItem("theme", nowDark ? "dark" : "light");
+        setIcon(nowDark);
+      });
+    });
+  </script>
+
+<script>
+  const fadeElements = document.querySelectorAll(".fade-in-on-scroll");
+
+  const appearOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      } else {
+        entry.target.classList.remove("in-view");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  fadeElements.forEach(el => {
+    appearOnScroll.observe(el);
+  });
+</script>
+
+<script>
+  document.querySelectorAll('.accordion-header').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const body = btn.nextElementSibling;
+      body.classList.toggle('open');
+    });
+  });
+</script>
+<!-- Toast notification for theme change -->
+<div id="theme-toast" class="theme-toast">Dark Mode On</div>
+
 </body>
 </html>
