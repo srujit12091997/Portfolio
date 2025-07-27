@@ -53,11 +53,19 @@ Co-authored and published in the *Journal of Emerging Technologies and Innovativ
 🔗 [View Full Paper](https://www.jetir.org/papers/JETIR1811003.pdf)
 
 📸 Preview
+<<<<<<< HEAD
 Light Mode
 ![Light Mode image](image-2.png)
 
 Dark Mode
 ![Dark mode image](image-3.png)
+=======
+Dark Mode
+![alt text](image.png)
+
+Light Mode
+![alt text](image-1.png)
+>>>>>>> 88e8843 (adding profile picture)
 
 👨‍💻 Author
 Srujit Varasala
