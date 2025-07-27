@@ -711,3 +711,15 @@ body.dark #theme-switch {
 .publication-card a:hover {
   text-decoration: underline;
 }
+
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: auto;
+}
