@@ -3,495 +3,541 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="description" content="Srujit Varasala | Premium frontend-engineered portfolio with cinematic interactions and polished product design." />
+  <title>Srujit Varasala | Frontend Engineer Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    (function () {
+      var key = "portfolio-theme";
+      try {
+        var saved = localStorage.getItem(key);
+        var preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", saved || preferred);
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="ambient-layer ambient-layer-one" aria-hidden="true"></div>
+  <div class="ambient-layer ambient-layer-two" aria-hidden="true"></div>
+  <div class="ambient-layer ambient-layer-three" aria-hidden="true"></div>
+  <div class="theme-wave" id="theme-wave" aria-hidden="true"></div>
 
-  <nav id="desktop-nav">
-  <div class="logo">Srujit Varasala</div>
-  <div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#case-studies">Case Studies</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact Me</a></li>
-      <li>
-  <label class="theme-toggle-wrapper" for="theme-switch">
-  <input type="checkbox" id="theme-switch" />
-  <span class="slider">
-    <span class="emoji" id="toggle-emoji">🌞</span>
-  </span>
-</label>
+  <!-- Sticky navigation with theme toggle -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Go to homepage">
+        <span class="brand-mark">SV</span>
+        <span class="brand-name">Srujit Varasala</span>
+      </a>
 
-</li>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a data-nav-link href="#about">About</a>
+        <a data-nav-link href="#experience">Experience</a>
+        <a data-nav-link href="#case-studies">Case Studies</a>
+        <a data-nav-link href="#projects">Projects</a>
+        <a data-nav-link href="#skills">Skills</a>
+        <a data-nav-link href="#contact">Contact</a>
+      </nav>
 
-
-    </ul>
-  </div>
-  </nav>
-
-
-
-  <nav id="hamburger-nav">
-    <div class="logo">Srujit Varasala</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul class="menu-links">
-      <li><a href="#about" onclick="toggleMenu()">About</a></li>
-      <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-      <li><a href="#case-studies" onclick="toggleMenu()">Case Studies</a></li>
-      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-      <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-      <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
-      </ul>
-    </div>
-  </nav>
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/LinkedInProfilePicture.jpg" alt="Srujit Varasala" class="profile-pic" />
-    </div>
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Srujit Varasala</h1>
-      <p class="section__text__p2">Software Developer</p>
-
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('Srujit_Resume.pdf')">
-          Download CV
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" data-theme="light">
+          <span class="toggle-track">
+            <span class="toggle-thumb">
+              <span class="toggle-icon toggle-icon-sun" aria-hidden="true">sun</span>
+              <span class="toggle-icon toggle-icon-moon" aria-hidden="true">moon</span>
+            </span>
+          </span>
         </button>
-        <button class="btn btn-color-1" onclick="location.href='#contact'">
-          Contact Info
+
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle mobile menu" aria-controls="mobile-nav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
-  
-      <div class="socials-container">
-        <img
-          src="./assets/linkedin.png"
-          alt="My LinkedIn profile"
-          class="icon"
-          onclick="location.href='https://www.linkedin.com/in/srujitvarasala/'"
-        />
-        <img
-          src="./assets/github.png"
-          alt="My GitHub profile"
-          class="icon"
-          onclick="location.href='https://github.com/srujit12091997'"
-        />
-      </div>
-      
     </div>
-  </section>
-  <section id="about" class="fade-in-on-scroll">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <p class="intro-paragraph"><strong>Hi, I’m Srujit – a curious and driven Software Engineer with 4+ years of experience turning complex ideas into scalable backend systems, seamless APIs, and dynamic web apps. I thrive at the intersection of clean code and real-world impact, with hands-on expertise in Java, Python, Spring Boot, AWS, and modern DevOps. Whether I’m optimizing data pipelines, deploying microservices, or building intuitive UIs, I bring a builder’s mindset and a passion for continuous learning. I believe great software is crafted with purpose, tested with precision, and shipped with pride.</strong></p>
-    <div class="section-container">
-      <div class="about-details-container">
-        <div class="about-containers">
-  
-          <div class="details-container">
-            <img
-              src="./assets/experience.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <h3>Experience</h3>
-            <p>4 years of Software Development</p>
-            <p>Software Engineering Intern, Full Stack | Local Grown Salads (Dec 2024 – Mar 2025)</p>
-            <p>Software Engineer | Jio Platform Limited(Jul 2020 – Dec 2022)</p>
-            <p>Software Developer intern(Feb 2019 – May 2020)</p>
-            <p>Full Stack Web Development intern | DLK Technologies (Nov 2018 -Dec 2018)</p>
-          </div>
-  
-          <div class="details-container">
-            <img
-              src="./assets/education2.png"
-              alt="Education icon"
-              class="icon"
-            />
-            <h3>Education</h3>
-            <p> Masters in computer science - New Jersey Institute of Technology (Jan 2023 - Dec 2024)<br />Bachelors in computer science - SRM University (2016-2020)</p>
-          </div>
-          <div class="details-container">
-            <img
-              src="./assets/checkmark.png"
-              alt="Checkmark icon"
-              class="icon"
-            />
-            <h3>Certificates</h3>
-            <p>McKinsey.org Forward Learning 2025</p><p> The Web Developer Bootcamp 2025<br />AWS Cloud Practioner 2025 <br /> Microsoft AI skillset 2025</p>
-          </div>
-  
-        </div class = "text-cointainer">          
+  </header>
+
+  <aside class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <a data-nav-link href="#about">About</a>
+    <a data-nav-link href="#experience">Experience</a>
+    <a data-nav-link href="#case-studies">Case Studies</a>
+    <a data-nav-link href="#projects">Projects</a>
+    <a data-nav-link href="#skills">Skills</a>
+    <a data-nav-link href="#contact">Contact</a>
+  </aside>
+  <button id="mobile-backdrop" class="mobile-backdrop" type="button" aria-hidden="true" tabindex="-1"></button>
+
+  <main>
+    <!-- Cinematic hero with layered parallax -->
+    <section id="home" class="hero section">
+      <div class="hero-gradient" aria-hidden="true">
+        <span class="hero-orb hero-orb-a" data-parallax="0.16"></span>
+        <span class="hero-orb hero-orb-b" data-parallax="-0.11"></span>
+        <span class="hero-orb hero-orb-c" data-parallax="0.07"></span>
       </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrows icon" class="icon arrow" onclick="location.href='./#experience'">
-  </section>
-  <section id="experience" class="fade-in-on-scroll">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
 
-        <div class="details-container">
-  <h2 class="experience-sub-title">Local Grown Salads</h2>
-  <p><strong>Role:</strong> Full Stack Developer Intern (Dec 2024 – Mar 2025)</p>
-  <p><strong>Team:</strong> LGS Network Team</p>
-  <div class="highlights-grid">
-    <div class="highlight">🔐 Engineered JWT-based authentication system using Spring Boot and Firebase, ensuring secure user login and token handling across the app.</div>
-    <div class="highlight">👤 Developed modular, role-based onboarding UI with React to streamline new user registration, access control, and dashboard redirection.</div>
-    <div class="highlight">🔗 Integrated REST APIs with React frontend to enable real-time updates for user activity, data visualizations, and dynamic widgets.</div>
-    <div class="highlight">🚀 Set up CI/CD pipeline using Docker and GitHub Actions for smooth code deployment and automated testing across staging environments.</div>
-    <div class="highlight">🧪 Wrote unit tests in JUnit and frontend tests using Jest to maintain over 90% coverage and reduce regression bugs in future releases.</div>
-    <div class="highlight">📈 Collaborated with stakeholders to design a scalable backend structure, improving feature rollout time by 30% during sprint cycles.</div>
-  </div>
-</div>
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <p class="kicker">Frontend Engineer | Full-Stack Systems</p>
+          <h1>
+            Building
+            <span>cinematic digital products</span>
+            with performance-first engineering.
+          </h1>
+          <p class="hero-role">I design as a <span id="typed-role"></span><span class="typing-cursor" aria-hidden="true"></span></p>
+          <p class="hero-description">
+            Software Engineer with 5+ years of experience shipping cloud-native applications,
+            intelligent systems, and polished user experiences. I combine architecture rigor with
+            premium interface craft.
+          </p>
 
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="Srujit_Resume_.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+            <a class="btn btn-secondary" href="#projects">View Work</a>
+          </div>
 
-        <div class="details-container">
-  <h2 class="experience-sub-title">Reliance Jio Platforms Ltd.</h2>
-  <p><strong>Role:</strong> Software Engineer (Jul 2020 – Dec 2022)</p>
-  <p><strong>Team:</strong> JAMP(Jio Ads Management Platform)</p>
-  <div class="highlights-grid">
-    <div class="highlight">📍 Led backend development for JioXplor, a large-scale location intelligence platform using Python and Spark (Scala).</div>
-    <div class="highlight">🔄 Built real-time ETL pipelines with Apache Kafka and Spark to process and analyze massive geospatial datasets.</div>
-    <div class="highlight">🗂️ Developed automation scripts to streamline data ingestion workflows, reducing manual effort and boosting reliability.</div>
-    <div class="highlight">📊 Designed reporting modules using Pandas and SQL, delivering actionable insights to product and analytics teams.</div>
-    <div class="highlight">🧩 Participated across the SDLC: from requirement gathering and development to deployment and production support.</div>
-    <div class="highlight">🚦Improved system efficiency and fault tolerance by optimizing pipeline performance during peak IPL streaming loads.</div>
-  </div>
-</div>
+          <div class="hero-links">
+            <a href="https://www.linkedin.com/in/srujitvarasala/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/srujit12091997" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
 
-        <div class="details-container">
-  <h2 class="experience-sub-title">Techniki Services</h2>
-  <p><strong>Role:</strong> Software Developer Intern (Feb 2019 – May 2020)</p>
-  <p><strong>Team:</strong>Techniki Dev team</p>
-  <div class="highlights-grid">
-    <div class="highlight">🛠️ Developed Python-based web applications integrating Java REST APIs with React.js frontends.</div>
-    <div class="highlight">📋 Translated business requirements into full-stack features, delivering production-ready functionality on time.</div>
-    <div class="highlight">🔍 Integrated Selenium for automated testing, reducing manual QA time by 30% and improving bug detection rate.</div>
-    <div class="highlight">🔧 Maintained clean, modular code using version control (Git), code reviews, and Agile best practices.</div>
-    <div class="highlight">🧪 Actively participated in release testing, bug tracking, and defect resolution during sprint delivery cycles.</div>
-    <div class="highlight">🎯 Delivered features across planning, testing, deployment, and support stages, gaining strong end-to-end ownership.</div>
-  </div>
-</div>
+        <div class="hero-visual" data-reveal>
+          <div class="hero-glass-card" data-parallax="-0.08">
+            <img src="./assets/LinkedInProfilePicture.jpg" alt="Portrait of Srujit Varasala" />
+          </div>
 
+          <article class="hero-chip hero-chip-top" data-parallax="0.14">
+            <p>Experience</p>
+            <strong>5+ years building at scale</strong>
+          </article>
+
+          <article class="hero-chip hero-chip-bottom" data-parallax="-0.12">
+            <p>Focus</p>
+            <strong>Frontend UX, cloud systems, AI delivery</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About and summary cards -->
+    <section id="about" class="section" data-reveal>
+      <div class="container section-shell">
+        <header class="section-head">
+          <p class="kicker">About</p>
+          <h2>Intentional software engineering across interface, infrastructure, and product outcomes.</h2>
+          <p>
+            I build reliable systems and polished user experiences that scale with business demands.
+            My work spans APIs, distributed processing, cloud operations, and high-quality frontend delivery.
+          </p>
+        </header>
+
+        <div class="about-layout">
+          <article class="glass-card about-summary" data-reveal>
+            <h3>What Drives My Work</h3>
+            <p>
+              I care about clean architecture, predictable delivery, and interfaces that feel crafted.
+              From system design to production support, I optimize for long-term maintainability and measurable impact.
+            </p>
+            <p>
+              Across each build, I focus on performance, accessibility, and smooth interaction quality.
+            </p>
+          </article>
+
+          <div class="about-cards stagger-group" data-stagger>
+            <article class="glass-card quick-card stagger-item" data-stagger-item>
+              <h3>Experience</h3>
+              <ul class="meta-list">
+                <li>Software Engineer, Employee Assist AI (Mar 2025 - Present)</li>
+                <li>Full Stack Developer Intern, Local Grown Salads (Dec 2024 - Mar 2025)</li>
+                <li>Software Engineer, Jio Platforms Ltd (Jul 2020 - Dec 2022)</li>
+              </ul>
+            </article>
+
+            <article class="glass-card quick-card stagger-item" data-stagger-item>
+              <h3>Education</h3>
+              <ul class="meta-list">
+                <li>M.S. Computer Science, NJIT (2023 - 2024)</li>
+                <li>B.Tech Computer Science, SRM University (2016 - 2020)</li>
+              </ul>
+            </article>
+
+            <article class="glass-card quick-card stagger-item" data-stagger-item>
+              <h3>Certifications</h3>
+              <ul class="meta-list">
+                <li>McKinsey.org Forward Program (2025)</li>
+                <li>AWS Cloud Practitioner (2025)</li>
+                <li>Microsoft AI Skillset (2025)</li>
+              </ul>
             </article>
           </div>
         </div>
       </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrows icon" class="icon arrow" onclick="location.href='./#projects'">
-  </section>
-  
-  <section id="case-studies" class="fade-in-on-scroll">
-  <p class="section__text__p1">Behind the Code</p>
-  <h1 class="title">Case Studies</h1>
+    </section>
 
-  <div class="experience-details-container">
-    <div class="about-containers">
+    <!-- Experience timeline -->
+    <section id="experience" class="section" data-reveal>
+      <div class="container section-shell">
+        <header class="section-head">
+          <p class="kicker">Experience</p>
+          <h2>Recent work across AI products, full-stack execution, and data-intensive platforms.</h2>
+        </header>
 
-      <!-- Case Study 1: LGS -->
-      <div class="details-container color-container">
-  <h2 class="experience-sub-title">Secure Authentication System</h2>
-  
-  <p><strong>Context:</strong> Local Grown Salads is a sustainability-focused startup producing fresh salads and vegetables in-house. They needed an internal web platform to help employees securely access role-based dashboards related to farming, logistics, and team operations.</p>
+        <div class="timeline stagger-group" data-stagger>
+          <article class="glass-card timeline-item stagger-item" data-stagger-item>
+            <div class="timeline-head">
+              <h3>Employee Assist AI</h3>
+              <span>Mar 2025 - Present</span>
+            </div>
+            <ul class="clean-list">
+              <li>Built production-ready LLM applications and autonomous workflow agents.</li>
+              <li>Designed RAG pipelines for low-latency grounded retrieval.</li>
+              <li>Developed scalable backend APIs and cloud deployment pipelines.</li>
+            </ul>
+          </article>
 
-  <p><strong>Problem:</strong> The company had no system in place to manage employee onboarding, access levels, or user authentication. They required a secure, scalable authentication and authorization solution that could grow alongside their cross-functional teams and operations.</p>
+          <article class="glass-card timeline-item stagger-item" data-stagger-item>
+            <div class="timeline-head">
+              <h3>Local Grown Salads</h3>
+              <span>Dec 2024 - Mar 2025</span>
+            </div>
+            <ul class="clean-list">
+              <li>Implemented JWT authentication using Spring Boot and Firebase.</li>
+              <li>Built modular onboarding and role-based dashboard control.</li>
+              <li>Improved release velocity with Docker and GitHub Actions CI/CD.</li>
+            </ul>
+          </article>
 
-  <p><strong>My Role:</strong> I led the entire development of the authentication system from scratch. Collaborating closely with cross-functional teams—including ops managers, engineers, and team leads—I mapped out roles and access flows. I designed a Lucidchart diagram to visualize the user journey and developed backend services using Java and Python.</p>
-
-  <p><strong>Solution:</strong> I built a secure login system using Spring Boot, Firebase Authentication, and JWT tokens. Role-based access was implemented to differentiate permissions between Managers and Employees. SQL was used for managing user metadata, while Firebase handled token validation. I also added API key functionality to support service integrations. To ensure reliability, I wrote test cases using JUnit and managed the build lifecycle and dependencies through Maven.</p>
-
-  <p><strong>Impact:</strong> This solution reduced employee onboarding time by 40% and significantly improved login security. It gave the company a scalable foundation for access control and ensured that each user saw only what they were meant to—boosting productivity and safeguarding data integrity.</p>
-</div>
-
-
-
-      <!-- Case Study 2: JioXplor -->
-      <div class="details-container color-container">
-  <h2 class="experience-sub-title">JioXplor: Real-Time Location Intelligence</h2>
-  
-  <p><strong>Context:</strong> Reliance Jio is India’s largest telecom service provider, offering digital connectivity to hundreds of millions. I contributed to JioXplor, a geospatial intelligence platform designed to track and analyze location-based user activity across the country in real-time.</p>
-
-  <p><strong>Problem:</strong> The team faced an enormous challenge: collecting and mapping high-volume geolocation data (latitude/longitude) from users across India and converting it into meaningful location insights. The process had to be fast, accurate, and scalable to power live business decisions and dashboards. The volume of data made traditional scraping and mapping methods inefficient, especially under real-time constraints.</p>
-
-  <p><strong>My Role:</strong> I was deeply involved in building the geospatial engine behind JioXplor. I wrote Python and Shell scripts to automate data ingestion, and developed Spark (Scala) jobs to process data in distributed batches. I also worked with GIS tools and external APIs including Google Maps, HERE Maps, and OpenStreetMap, where I handled reverse geocoding, location tagging, and rate-limiting challenges.</p>
-
-  <p><strong>Solution:</strong> To solve API rate limits and latency bottlenecks, I implemented multi-threaded request handling and orchestrated the process across multiple cloud VMs. I designed logic to throttle and retry failed requests efficiently. Processed data was mapped to Places of Interest (POIs), then stored in Akamai NetStorage and HDFS for redundancy. I queried location-tagged data using SQL to extract POI density and location-based trends. These insights were used by the business team for strategic decisions, including IPL 2022 customer engagement.</p>
-
-  <p><strong>Impact:</strong> My solution enabled accurate geospatial mapping across India at scale. The business team gained access to millions of POI insights and real-time location patterns. This significantly boosted the quality of user targeting, infrastructure planning, and event-based decision-making. The system became a key data source for location-driven strategy and was praised for its speed, accuracy, and extensibility.</p>
-</div>
-
-</section>
-
-
-
-
-  <section id="projects" class="fade-in-on-scroll">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-  
-    <div class="experience-details-container">
-      <div class = "about-containers">
-      <div class="details-container color-container">
-
-        <div class="article-container">
-          <img
-            src="./assets/project1.png"
-            alt="Project 1"
-            class="project-img "
-          />
-        </div>
-  
-        <h2 class="experience-sub-title project-title">House Prices Advanced Regression</h2>
-  
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/srujit12091997/House-Prices-Advanced-Regression'"
-          >
-            Github
-          </button>
+          <article class="glass-card timeline-item stagger-item" data-stagger-item>
+            <div class="timeline-head">
+              <h3>Reliance Jio Platforms</h3>
+              <span>Jul 2020 - Dec 2022</span>
+            </div>
+            <ul class="clean-list">
+              <li>Led backend components for JioXplor geospatial intelligence workflows.</li>
+              <li>Delivered Kafka + Spark data pipelines for high-volume location streams.</li>
+              <li>Built reporting modules that informed high-priority business decisions.</li>
+            </ul>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="experience-details-container">
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img src="./assets/Wine.png" alt="Project 2" class="project-img" />
+    <!-- Case studies -->
+    <section id="case-studies" class="section" data-reveal>
+      <div class="container section-shell">
+        <header class="section-head">
+          <p class="kicker">Case Studies</p>
+          <h2>How I approach problem framing, architecture, and execution quality.</h2>
+        </header>
+
+        <div class="case-grid stagger-group" data-stagger>
+          <article class="glass-card case-card stagger-item" data-stagger-item>
+            <h3>Secure Authentication Platform</h3>
+            <p class="case-meta">Local Grown Salads | Full-stack security foundation</p>
+            <div class="case-block">
+              <h4>Problem</h4>
+              <p>No scalable role-based access framework for internal operations.</p>
+            </div>
+            <div class="case-block">
+              <h4>Solution</h4>
+              <p>Built Spring Boot + Firebase authentication with JWT session security, role routing, and test-backed API validation.</p>
+            </div>
+            <div class="case-block">
+              <h4>Impact</h4>
+              <p>Cut onboarding time by 40% and created an extensible security baseline for growth.</p>
+            </div>
+          </article>
+
+          <article class="glass-card case-card stagger-item" data-stagger-item>
+            <h3>JioXplor Geospatial Engine</h3>
+            <p class="case-meta">Jio Platforms | Real-time location intelligence</p>
+            <div class="case-block">
+              <h4>Problem</h4>
+              <p>Needed accurate large-scale reverse geolocation under strict latency constraints.</p>
+            </div>
+            <div class="case-block">
+              <h4>Solution</h4>
+              <p>Built distributed Spark processing, multi-threaded API enrichment, and resilient storage workflows.</p>
+            </div>
+            <div class="case-block">
+              <h4>Impact</h4>
+              <p>Enabled reliable POI intelligence and improved campaign planning during peak events.</p>
+            </div>
+          </article>
         </div>
-  
-        <h2 class="experience-sub-title project-title">Wine Quality Prediction System</h2>
-  
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/srujit12091997/EC2Wine-Parallel-Wine-Quality-Engine'">
-            Github
-          </button>
+      </div>
+    </section>
+
+    <!-- Projects with filter animation -->
+    <section id="projects" class="section" data-reveal>
+      <div class="container section-shell">
+        <header class="section-head">
+          <p class="kicker">Projects</p>
+          <h2>Selected builds with strong engineering quality and interactive product thinking.</h2>
+        </header>
+
+        <div class="project-filter" role="tablist" aria-label="Project filters">
+          <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+          <button class="filter-chip" type="button" data-filter="ml">ML</button>
+          <button class="filter-chip" type="button" data-filter="cloud">Cloud</button>
+          <button class="filter-chip" type="button" data-filter="iot">IoT</button>
+        </div>
+
+        <div class="project-grid stagger-group" data-stagger>
+          <article class="project-card glass-card stagger-item" data-stagger-item data-project-category="ml cloud">
+            <div class="project-media">
+              <img src="./assets/project1.png" alt="House Prices Advanced Regression project" />
+              <div class="project-overlay">
+                <p>End-to-end regression modeling with feature engineering, tuning, and evaluation pipelines.</p>
+                <div class="project-actions">
+                  <a class="btn btn-primary btn-sm" href="https://github.com/srujit12091997/House-Prices-Advanced-Regression" target="_blank" rel="noreferrer">View Project</a>
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/srujit12091997/House-Prices-Advanced-Regression" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-meta">
+              <h3>House Prices Advanced Regression</h3>
+              <p>Python, scikit-learn, model optimization</p>
+            </div>
+          </article>
+
+          <article class="project-card glass-card stagger-item" data-stagger-item data-project-category="ml cloud">
+            <div class="project-media">
+              <img src="./assets/Wine.png" alt="Wine quality prediction project" />
+              <div class="project-overlay">
+                <p>Distributed quality prediction engine with parallel execution and cloud-hosted experimentation.</p>
+                <div class="project-actions">
+                  <a class="btn btn-primary btn-sm" href="https://github.com/srujit12091997/EC2Wine-Parallel-Wine-Quality-Engine" target="_blank" rel="noreferrer">View Project</a>
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/srujit12091997/EC2Wine-Parallel-Wine-Quality-Engine" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-meta">
+              <h3>Wine Quality Prediction Engine</h3>
+              <p>AWS EC2, parallel processing, ML workflows</p>
+            </div>
+          </article>
+
+          <article class="project-card glass-card stagger-item" data-stagger-item data-project-category="iot research">
+            <div class="project-media">
+              <img src="./assets/project3.png" alt="Plant health monitoring system project" />
+              <div class="project-overlay">
+                <p>Wireless sensor system for live plant health monitoring and data-driven irrigation automation.</p>
+                <div class="project-actions">
+                  <a class="btn btn-primary btn-sm" href="https://www.jetir.org/papers/JETIR1811003.pdf" target="_blank" rel="noreferrer">View Project</a>
+                  <a class="btn btn-ghost btn-sm" href="https://github.com/srujit12091997" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-meta">
+              <h3>Plant Health Monitoring System</h3>
+              <p>Arduino, wireless telemetry, IoT orchestration</p>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
+    </section>
 
+    <!-- Skills dashboard with circular rings -->
+    <section id="skills" class="section" data-reveal>
+      <div class="container section-shell">
+        <header class="section-head">
+          <p class="kicker">Skills</p>
+          <h2>Interactive capability map across frontend, backend, cloud, and AI delivery.</h2>
+        </header>
 
-    <section id="skills" class="accordion-skills fade-in-on-scroll">
-  <p class="section__text__p1">What I Bring</p>
-  <h1 class="title">Skills</h1>
+        <div class="skills-layout">
+          <div class="ring-grid stagger-group" data-stagger>
+            <article class="ring-card glass-card stagger-item" data-stagger-item>
+              <div class="ring-shell">
+                <svg class="skill-ring" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="ring-track" cx="60" cy="60" r="46"></circle>
+                  <circle class="ring-progress" cx="60" cy="60" r="46" data-percent="94"></circle>
+                </svg>
+                <p class="ring-value" data-ring-value="94">0%</p>
+              </div>
+              <h3>Backend Systems</h3>
+              <p>Microservices, API architecture, resiliency.</p>
+            </article>
 
-  <div class="accordion">
+            <article class="ring-card glass-card stagger-item" data-stagger-item>
+              <div class="ring-shell">
+                <svg class="skill-ring" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="ring-track" cx="60" cy="60" r="46"></circle>
+                  <circle class="ring-progress" cx="60" cy="60" r="46" data-percent="90"></circle>
+                </svg>
+                <p class="ring-value" data-ring-value="90">0%</p>
+              </div>
+              <h3>Cloud Engineering</h3>
+              <p>AWS, GCP, Azure, scalable deployment patterns.</p>
+            </article>
 
-    <div class="accordion-item">
-      <button class="accordion-header">🖼️ Frontend Skills</button>
-      <div class="accordion-body">
-        <h4>Languages & Frameworks</h4>
-        <span class="skill-badge">HTML5</span><span class="skill-badge">CSS3</span><span class="skill-badge">JavaScript (ES6+)</span><span class="skill-badge">TypeScript</span><span class="skill-badge">React.js</span>
-        <h4>UI Styling & State Management</h4>
-        <span class="skill-badge">TailwindCSS</span><span class="skill-badge">Bootstrap</span><span class="skill-badge">Material UI</span><span class="skill-badge">Redux</span><span class="skill-badge">Context API</span>
-        <h4>Testing & Performance</h4>
-        <span class="skill-badge">React Testing Library</span><span class="skill-badge">Playwright</span> <span class="skill-badge">Lazy Loading</span><span class="skill-badge">Code Splitting</span>
+            <article class="ring-card glass-card stagger-item" data-stagger-item>
+              <div class="ring-shell">
+                <svg class="skill-ring" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="ring-track" cx="60" cy="60" r="46"></circle>
+                  <circle class="ring-progress" cx="60" cy="60" r="46" data-percent="88"></circle>
+                </svg>
+                <p class="ring-value" data-ring-value="88">0%</p>
+              </div>
+              <h3>Data and Streaming</h3>
+              <p>Kafka, Spark, SQL, production data pipelines.</p>
+            </article>
+
+            <article class="ring-card glass-card stagger-item" data-stagger-item>
+              <div class="ring-shell">
+                <svg class="skill-ring" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="ring-track" cx="60" cy="60" r="46"></circle>
+                  <circle class="ring-progress" cx="60" cy="60" r="46" data-percent="86"></circle>
+                </svg>
+                <p class="ring-value" data-ring-value="86">0%</p>
+              </div>
+              <h3>Frontend Delivery</h3>
+              <p>Interaction design, performance, and accessibility.</p>
+            </article>
+
+            <article class="ring-card glass-card stagger-item" data-stagger-item>
+              <div class="ring-shell">
+                <svg class="skill-ring" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="ring-track" cx="60" cy="60" r="46"></circle>
+                  <circle class="ring-progress" cx="60" cy="60" r="46" data-percent="91"></circle>
+                </svg>
+                <p class="ring-value" data-ring-value="91">0%</p>
+              </div>
+              <h3>AI Product Integration</h3>
+              <p>RAG, agents, and enterprise AI workflows.</p>
+            </article>
+
+            <article class="ring-card glass-card stagger-item" data-stagger-item>
+              <div class="ring-shell">
+                <svg class="skill-ring" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="ring-track" cx="60" cy="60" r="46"></circle>
+                  <circle class="ring-progress" cx="60" cy="60" r="46" data-percent="89"></circle>
+                </svg>
+                <p class="ring-value" data-ring-value="89">0%</p>
+              </div>
+              <h3>DevOps and Delivery</h3>
+              <p>CI/CD automation, observability, reliability.</p>
+            </article>
+          </div>
+
+          <article class="glass-card skill-side-panel" data-reveal>
+            <h3>Core Stack</h3>
+            <div class="badge-list">
+              <span class="badge">Java</span>
+              <span class="badge">Python</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">Spring Boot</span>
+              <span class="badge">React</span>
+              <span class="badge">Kafka</span>
+              <span class="badge">Spark</span>
+              <span class="badge">Docker</span>
+              <span class="badge">Kubernetes</span>
+              <span class="badge">AWS</span>
+              <span class="badge">GCP</span>
+              <span class="badge">Azure</span>
+              <span class="badge">System Design</span>
+              <span class="badge">RAG Pipelines</span>
+              <span class="badge">GraphQL</span>
+              <span class="badge">CI/CD</span>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="accordion-item">
-      <button class="accordion-header">⚙️ Backend Skills</button>
-      <div class="accordion-body">
-        <h4>Languages & Frameworks</h4>
-        <span class="skill-badge">Java</span><span class="skill-badge">Python</span><span class="skill-badge">Go</span><span class="skill-badge">Node.js</span><span class="skill-badge">Scala</span><span class="skill-badge">C++</span><span class="skill-badge">Spring Boot</span><span class="skill-badge">Express.js</span><span class="skill-badge">Django</span><span class="skill-badge">Flask</span>
-        <h4>APIs & Auth</h4>
-        <span class="skill-badge">REST</span><span class="skill-badge">GraphQL</span><span class="skill-badge">JWT</span><span class="skill-badge">OAuth2</span>
-        <h4>Real-Time & Async</h4>
-        <span class="skill-badge">WebSockets</span><span class="skill-badge">Kafka</span><span class="skill-badge">RabbitMQ</span><span class="skill-badge">Server-Sent Events</span>
-        <h4>Testing & Architecture</h4>
-        <span class="skill-badge">JUnit</span><span class="skill-badge">PyTest</span><span class="skill-badge">Postman</span><span class="skill-badge">Selenium</span><span class="skill-badge">Microservices</span>
+    <!-- Publication highlight -->
+    <section id="publications" class="section" data-reveal>
+      <div class="container section-shell">
+        <header class="section-head">
+          <p class="kicker">Publication</p>
+          <h2>Research contribution in sensor-driven plant health monitoring.</h2>
+        </header>
+
+        <article class="glass-card publication-card">
+          <h3>Arduino Based System to Monitor Plant Health and Growth Using Wireless Sensors</h3>
+          <p><strong>Journal:</strong> JETIR, Volume 5, Issue 11 (November 2018)</p>
+          <p>
+            Designed an IoT framework for real-time monitoring of moisture, humidity, temperature,
+            and plant stress indicators using wireless sensor networks. The system supported remote
+            visibility and resource-efficient irrigation decisions.
+          </p>
+          <a class="text-link" href="https://www.jetir.org/papers/JETIR1811003.pdf" target="_blank" rel="noreferrer">Read Full Paper</a>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <div class="accordion-item">
-      <button class="accordion-header">🛠️ Tools & DevOps</button>
-      <div class="accordion-body">
-        <h4>Containers & CI/CD</h4>
-        <span class="skill-badge">GitHub Actions</span><span class="skill-badge">Jenkins</span><span class="skill-badge">Git</span><span class="skill-badge">GitHub</span><span class="skill-badge">GitLab</span><span class="skill-badge">Docker</span><span class="skill-badge">Kubernetes</span>
-        <h4>Build Tools & Monitoring</h4>
-        <span class="skill-badge">Webpack</span><span class="skill-badge">Vite</span><span class="skill-badge">Maven</span><span class="skill-badge">Gradle</span>
-        <span class="skill-badge">Sentry</span><span class="skill-badge">Prometheus</span><span class="skill-badge">Grafana</span>
+    <!-- Contact section -->
+    <section id="contact" class="section" data-reveal>
+      <div class="container section-shell">
+        <header class="section-head">
+          <p class="kicker">Contact</p>
+          <h2>Let us build something high-impact together.</h2>
+          <p>Share your project or opportunity. I will respond quickly with next steps.</p>
+        </header>
+
+        <div class="contact-layout">
+          <article class="glass-card contact-card">
+            <h3>Direct Contact</h3>
+            <p>Open to engineering roles, consulting, and collaborative product builds.</p>
+            <ul class="contact-list">
+              <li><span>Email</span><a href="mailto:srujit.v@gmail.com">srujit.v@gmail.com</a></li>
+              <li><span>Phone</span><a href="tel:+18622375382">+1 (862) 237-5382</a></li>
+              <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/srujitvarasala/" target="_blank" rel="noreferrer">/in/srujitvarasala</a></li>
+              <li><span>GitHub</span><a href="https://github.com/srujit12091997" target="_blank" rel="noreferrer">github.com/srujit12091997</a></li>
+            </ul>
+          </article>
+
+          <form id="contact-form" class="glass-card contact-form" novalidate>
+            <div class="input-shell">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="input-shell">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="input-shell">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-title">Srujit Varasala</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a data-nav-link href="#about">About</a>
+        <a data-nav-link href="#experience">Experience</a>
+        <a data-nav-link href="#projects">Projects</a>
+        <a data-nav-link href="#skills">Skills</a>
+        <a data-nav-link href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">Copyright 2026 Srujit Varasala. All rights reserved.</p>
     </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">☁️ Cloud Platforms</button>
-      <div class="accordion-body">
-        <h4>AWS</h4>
-        <span class="skill-badge">S3</span><span class="skill-badge">EC2</span><span class="skill-badge">Lambda</span><span class="skill-badge">API Gateway</span><span class="skill-badge">RDS</span><span class="skill-badge">ECS</span>
-        <h4>GCP</h4>
-        <span class="skill-badge">BigQuery</span><span class="skill-badge">Cloud Functions</span><span class="skill-badge">Firebase</span><span class="skill-badge">Pub/Sub</span>
-        
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">🗃️ Database</button>
-      <div class="accordion-body">
-        <h4>SQL</h4>
-        <span class="skill-badge">PostgreSQL</span><span class="skill-badge">MySQL</span><span class="skill-badge">SQL Server</span><span class="skill-badge">Oracle</span>
-        <h4>NoSQL & Graph</h4>
-        <span class="skill-badge">MongoDB</span><span class="skill-badge">Neo4j</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    
-  </div>
-    <img src="./assets/arrow.png" alt="Arrows icon" class="icon arrow" onclick="location.href='./#experience'">
-  </section>
-
-<section id="publications">
-  <h2>📚 Publications</h2>
-  <div class="publication-card">
-    <h3>“ARDUINO BASED SYSTEM TO MONITOR THE PLANTS' HEALTH AND GROWTH USING WIRELESS SENSORS”</h3>
-    <p><strong>Authors:</strong> Srujit Varasala, Mrs. Angline, Naveen Reddy, Shaik Khadeer Basha</p>
-    <p><strong>Published in:</strong> Journal of Emerging Technologies and Innovative Research (JETIR), Volume 5, Issue 11, November 2018</p>
-    
-    <p><strong>Case Study:</strong></p>
-    <p>
-      In this research, we designed and implemented an IoT-based system using Arduino and wireless sensors to monitor the health and growth of plants in real-time. The system aims to address agricultural productivity challenges by enabling proactive plant care through data-driven insights.
-    </p>
-    <p>
-      The core functionality involved sensing nodes embedded in the soil, which captured key environmental metrics such as soil moisture, temperature, humidity, and even vibration patterns to detect larval activity. These nodes were powered by rechargeable batteries and communicated wirelessly with a base station using ZigBee protocol.
-    </p>
-    <p>
-      The base station aggregated the sensor data and relayed it to a mobile device via an Arduino processing unit. A dedicated mobile application then presented this data in a user-friendly format, allowing remote monitoring and timely alerts. This system could also automate irrigation based on moisture readings, enabling efficient resource usage and minimal manual intervention.
-    </p>
-    <p>
-      The solution is highly scalable and power-efficient, capable of supporting multiple sensors across larger agricultural fields. Its impact lies in reducing crop loss, improving food security, and making precision agriculture more accessible to small and medium-scale farmers.
-    </p>
-    
-    <a href="https://www.jetir.org/papers/JETIR1811003.pdf" target="_blank">🔗 View Full Paper</a>
-  </div>
-</section>
-
-
-
-
-  <section id="contact" class="fade-in-on-scroll">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-  
-    <div class="contact-info-upper-container">
-      
-      <div class="contact-info-container">
-        <img
-          src="./assets/email.png"
-          alt="Email icon"
-          class="icon contact-icon"
-        />
-        <p><a href="mailto:examplemail@gmail.com">srujit.v@gmail.com</a></p>
-      </div>
-  
-      <div class="contact-info-container">
-        <img
-          src="./assets/linkedin.png"
-          alt="LinkedIn icon"
-          class="icon contact-icon"
-        />
-        <p><a href="https://www.linkedin.com/in/srujitvarasala/">LinkedIn</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img
-          src="./assets/phone2.png"
-          alt="Phone icon"
-          class="icon contact-icon phone-icon"
-        />
-        <p><a href="8622375382">8622375382</a></p>
-      </div>
-    </div>
-    <div class="contact-message fade-in-on-scroll">
-    <p>Let’s build something awesome together.</p>
-    </div>
-
-  </section>
-  <footer>
-    <div class="nav-links-container">
-      <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#case-studies">Case Studies</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact Me</a></li>
-      </ul>
-    </div>
-  
-    <p>© 2025 Srujit Varasala. All Rights Reserved.</p>
   </footer>
- 
-  <script src="script.js"></script>
-  <script src="script.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.getElementById("theme-toggle");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const savedTheme = localStorage.getItem("theme");
-
-      const setIcon = (isDark) => toggleBtn.textContent = isDark ? "☀️" : "🌙";
-
-      const initialDark = savedTheme === "dark" || (!savedTheme && prefersDark);
-      if (initialDark) {
-        document.body.classList.add("dark");
-        setIcon(true);
-      }
-
-      toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-        const nowDark = document.body.classList.contains("dark");
-        localStorage.setItem("theme", nowDark ? "dark" : "light");
-        setIcon(nowDark);
-      });
-    });
-  </script>
-
-<script>
-  const fadeElements = document.querySelectorAll(".fade-in-on-scroll");
-
-  const appearOnScroll = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-      } else {
-        entry.target.classList.remove("in-view");
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-
-  fadeElements.forEach(el => {
-    appearOnScroll.observe(el);
-  });
-</script>
-
-<script>
-  document.querySelectorAll('.accordion-header').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const body = btn.nextElementSibling;
-      body.classList.toggle('open');
-    });
-  });
-</script>
-<!-- Toast notification for theme change -->
-<div id="theme-toast" class="theme-toast">Dark Mode On</div>
-
 </body>
 </html>
