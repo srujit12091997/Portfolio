@@ -5,6 +5,7 @@
 
   .hero-grid,
   .about-layout,
+  .publication-layout,
   .skills-layout,
   .contact-layout {
     grid-template-columns: 1fr;
@@ -21,8 +22,22 @@
     max-width: 100%;
   }
 
+  .hero-status-card {
+    position: static;
+    width: 100%;
+    margin-top: var(--space-3);
+  }
+
+  .header-resume {
+    display: none;
+  }
+
+  .metric-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .case-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .project-grid {
@@ -87,6 +102,12 @@
     width: 100%;
   }
 
+  .about-cards,
+  .metric-strip,
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-actions .btn {
     flex: 1 1 auto;
   }
@@ -111,6 +132,14 @@
   .section-shell {
     padding: var(--space-5);
     border-radius: var(--radius-lg);
+  }
+
+  .publication-actions {
+    width: 100%;
+  }
+
+  .publication-actions .btn {
+    flex: 1 1 auto;
   }
 
   .contact-list li {

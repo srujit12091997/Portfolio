@@ -314,9 +314,9 @@
     }
 
     var roles = [
-      "Frontend Product Engineer",
-      "System Design Thinker",
-      "Cloud and AI Builder",
+      "Software Engineer",
+      "React Web Developer",
+      "Full-Stack App Builder",
     ];
 
     if (prefersReducedMotion) {
