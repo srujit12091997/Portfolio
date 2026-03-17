@@ -46,14 +46,28 @@
     themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
   }
 
+  function updateThemeWaveOrigin() {
+    if (!themeToggle) {
+      return;
+    }
+
+    var rect = themeToggle.getBoundingClientRect();
+    root.style.setProperty("--theme-wave-top", rect.top + rect.height / 2 + "px");
+    root.style.setProperty("--theme-wave-left", rect.left + rect.width / 2 + "px");
+  }
+
   function setupThemeToggle() {
     if (!themeToggle) {
       return;
     }
 
+    updateThemeWaveOrigin();
+    window.addEventListener("resize", updateThemeWaveOrigin);
+
     themeToggle.addEventListener("click", function () {
       var nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
 
+      updateThemeWaveOrigin();
       root.classList.add("theme-animating");
       setTheme(nextTheme);
 
@@ -314,9 +328,9 @@
     }
 
     var roles = [
-      "Software Engineer",
-      "React Web Developer",
-      "Full-Stack App Builder",
+      "Software Architect",
+      "Senior Software Engineer",
+      "Distributed Systems Builder",
     ];
 
     if (prefersReducedMotion) {

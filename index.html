@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Srujit Varasala | Software engineer building React web apps, full-stack products, and AI-backed platforms." />
-  <title>Srujit Varasala | Software Engineer and React Developer</title>
+  <meta name="description" content="Srujit Varasala | Senior software engineer architecting React applications, full-stack platforms, and distributed systems." />
+  <title>Srujit Varasala | Senior Software Engineer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <script>
     (function () {
       var key = "portfolio-theme";
       try {
         var saved = localStorage.getItem(key);
-        var preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", saved || preferred);
+        document.documentElement.setAttribute("data-theme", saved || "dark");
       } catch (error) {
-        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.setAttribute("data-theme", "dark");
       }
     })();
   </script>
@@ -51,7 +50,12 @@
       </nav>
 
       <div class="header-actions">
-        <a class="header-resume" href="Srujit_Resume.pdf" download="Srujit_Resume.pdf">Download Resume</a>
+        <a class="header-resume" href="Srujit_Resume.pdf" download="Srujit_Resume.pdf">
+          <span class="header-resume-full">Download Resume</span>
+          <span class="header-resume-short">Resume</span>
+        </a>
+
+        <span class="header-actions-divider" aria-hidden="true"></span>
 
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" data-theme="light">
           <span class="toggle-track">
@@ -92,26 +96,26 @@
 
       <div class="container hero-grid">
         <div class="hero-copy" data-reveal>
-          <p class="kicker">Software Engineer | React Web &amp; App Developer</p>
+          <p class="kicker">Senior Software Engineer | Full-Stack &amp; Backend Systems</p>
           <h1>
-            Designing
-            <span>React web apps and full-stack software</span>
-            that feel intuitive, fast, and production-ready.
+            Architecting <span>high-performance web apps</span> and <span>distributed systems</span>
+            that scale with your business.
           </h1>
-          <p class="hero-role">I work as a <span id="typed-role"></span><span class="typing-cursor" aria-hidden="true"></span></p>
+          <p class="hero-role">Operating as a <span id="typed-role"></span><span class="typing-cursor" aria-hidden="true"></span></p>
           <p class="hero-description">
-            Software engineer with 5+ years of experience building modern web apps, internal tools,
-            secure backend services, and AI-powered workflows. I focus on clean UI, reliable APIs,
-            and product experiences that users actually enjoy using.
+            I architect full-stack applications where high-performance React interfaces meet resilient
+            backend services. From designing type-safe API contracts to optimizing database schemas,
+            I focus on building software that is as robust under the hood as it is polished on the
+            surface.
           </p>
 
           <div class="hero-pill-list" aria-label="Core technologies">
-            <span class="hero-pill">React</span>
+            <span class="hero-pill">React Architecture</span>
             <span class="hero-pill">TypeScript</span>
-            <span class="hero-pill">JavaScript</span>
-            <span class="hero-pill">Node.js</span>
-            <span class="hero-pill">Spring Boot</span>
-            <span class="hero-pill">Cloud &amp; AI</span>
+            <span class="hero-pill">Distributed Systems</span>
+            <span class="hero-pill">AWS</span>
+            <span class="hero-pill">API Performance</span>
+            <span class="hero-pill">Product Ownership</span>
           </div>
 
           <div class="hero-actions">
@@ -133,12 +137,12 @@
 
           <article class="hero-chip hero-chip-top" data-parallax="0.14">
             <p>Positioning</p>
-            <strong>Software Engineer, React, web app, and product roles</strong>
+            <strong>Senior engineer for product-facing React systems and distributed software</strong>
           </article>
 
           <article class="hero-chip hero-chip-bottom" data-parallax="-0.12">
-            <p>Build Focus</p>
-            <strong>UI polish, backend reliability, API integration, cloud delivery</strong>
+            <p>Operating Mode</p>
+            <strong>Type-safe contracts, performance budgets, resilient services, cloud delivery</strong>
           </article>
 
           <article class="glass-card hero-status-card" data-parallax="0.09">
@@ -146,9 +150,9 @@
             <div class="hero-status-grid">
               <span>React</span>
               <span>TypeScript</span>
-              <span>Node</span>
-              <span>Spring</span>
-              <span>FastAPI</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>Kafka</span>
               <span>AWS</span>
             </div>
           </article>
@@ -160,83 +164,113 @@
       <div class="container section-shell">
         <header class="section-head">
           <p class="kicker">About</p>
-          <h2>I specialize in bridging the gap between complex engineering and intuitive user experiences.</h2>
+          <h2>I bridge the gap between complex engineering and intuitive product flows.</h2>
           <p>
-            My work is centered on building React-driven interfaces and full-stack systems that
-            transform abstract requirements into polished, scalable product flows.
+            With 5+ years of experience, including large-scale engineering at Jio Platforms, I focus
+            on building type-safe, resilient full-stack architectures and polished React interfaces.
           </p>
         </header>
 
-        <div class="about-layout">
-          <article class="glass-card about-summary" data-reveal>
-            <h3>How I approach product engineering</h3>
+        <div class="about-bento stagger-group" data-stagger>
+          <article class="glass-card about-summary about-panel about-panel-primary stagger-item" data-stagger-item>
+            <p class="panel-eyebrow">Architectural Lens</p>
+            <h3>Engineered for clarity at the interface layer and resilience in the service layer.</h3>
             <p>
-              I focus on creating dependable services that perform as beautifully as they look.
+              Architected product-facing flows that turn ambiguous requirements into typed contracts,
+              predictable UI states, and release-ready backend services.
             </p>
             <p>
-              That means building thoughtful frontend experiences, reliable APIs, secure authentication,
-              and scalable delivery flows that stay polished under real product pressure.
+              Optimized the handoff between frontend and backend by treating interaction design, API
+              design, and cloud delivery as one system instead of separate tasks.
             </p>
+            <div class="badge-list authority-list" aria-label="Architecture strengths">
+              <span class="badge">React Architecture</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">Distributed Systems</span>
+              <span class="badge">AWS Delivery</span>
+              <span class="badge">Performance</span>
+            </div>
           </article>
 
-          <div class="about-cards stagger-group" data-stagger>
-            <article class="glass-card quick-card stagger-item" data-stagger-item>
-              <h3>What I Build</h3>
-              <ul class="meta-list">
-                <li>React interfaces and modern web application experiences</li>
-                <li>Full-stack dashboards, onboarding flows, and internal tools</li>
-                <li>Backend APIs, authentication, and cloud-ready service layers</li>
-              </ul>
-            </article>
+          <article class="glass-card about-panel impact-panel stagger-item" data-stagger-item>
+            <p class="panel-eyebrow">Impact Grid</p>
+            <div class="impact-grid">
+              <div class="impact-tile">
+                <p class="impact-value">1,000+</p>
+                <p class="impact-label">Concurrent-user expectations shaped by Jio-scale engineering patterns.</p>
+              </div>
+              <div class="impact-tile">
+                <p class="impact-value">Type-safe</p>
+                <p class="impact-label">Architected full-stack systems with TypeScript-first contracts and cloud-ready APIs.</p>
+              </div>
+              <div class="impact-tile">
+                <p class="impact-value">Ownership</p>
+                <p class="impact-label">Owned product-facing features from architecture, implementation, and release hardening through handoff.</p>
+              </div>
+            </div>
+          </article>
 
-            <article class="glass-card quick-card stagger-item" data-stagger-item>
-              <h3>Experience Snapshot</h3>
-              <ul class="meta-list">
-                <li>5+ years across software engineering, full-stack development, and AI systems</li>
-                <li>Recent work in employee AI products and secure operational platforms</li>
-                <li>Prior large-scale engineering experience at Jio Platforms</li>
-              </ul>
-            </article>
+          <article class="glass-card about-panel quick-card stagger-item" data-stagger-item>
+            <p class="panel-eyebrow">What I Build</p>
+            <ul class="meta-list meta-list-strong">
+              <li>Architected React dashboards, onboarding flows, and internal tools with clean state boundaries.</li>
+              <li>Engineered backend APIs, auth layers, and cloud deployment paths that remain readable under change.</li>
+              <li>Optimized developer velocity with typed interfaces, reliable delivery pipelines, and pragmatic system design.</li>
+            </ul>
+          </article>
 
-            <article class="glass-card quick-card stagger-item" data-stagger-item>
-              <h3>Education</h3>
-              <ul class="meta-list">
-                <li>M.S. Computer Science, NJIT (2023 - 2024)</li>
-                <li>B.Tech Computer Science, SRM University (2016 - 2020)</li>
-              </ul>
-            </article>
+          <article class="glass-card about-panel trust-panel stagger-item" data-stagger-item>
+            <p class="panel-eyebrow">Education</p>
+            <div class="badge-list badge-list-grid" aria-label="Education">
+              <span class="badge badge-strong">M.S. Computer Science | NJIT</span>
+              <span class="badge badge-strong">2023 - 2024</span>
+              <span class="badge badge-strong">B.Tech Computer Science | SRM University</span>
+              <span class="badge badge-strong">2016 - 2020</span>
+            </div>
+          </article>
 
-            <article class="glass-card quick-card stagger-item" data-stagger-item>
-              <h3>Credentials</h3>
-              <ul class="meta-list">
-                <li>AWS Cloud Practitioner (2025)</li>
-                <li>Microsoft AI Skillset (2025)</li>
-                <li>McKinsey.org Forward Program (2025)</li>
-              </ul>
-            </article>
-          </div>
+          <article class="glass-card about-panel trust-panel stagger-item" data-stagger-item>
+            <p class="panel-eyebrow">Credentials</p>
+            <div class="badge-list badge-list-grid" aria-label="Credentials">
+              <span class="badge badge-strong">AWS Cloud Practitioner</span>
+              <span class="badge badge-strong">Microsoft AI Skillset</span>
+              <span class="badge badge-strong">McKinsey.org Forward Program</span>
+            </div>
+          </article>
         </div>
 
-        <div class="metric-strip stagger-group" data-stagger>
-          <article class="glass-card metric-card stagger-item" data-stagger-item>
-            <p class="metric-value">5+</p>
-            <p class="metric-label">Years shipping production software</p>
-          </article>
+        <div class="stats-shell">
+          <header class="stats-head">
+            <p class="kicker">Stats</p>
+            <h3>Signals that position the work at a senior architectural level.</h3>
+          </header>
 
-          <article class="glass-card metric-card stagger-item" data-stagger-item>
-            <p class="metric-value">React</p>
-            <p class="metric-label">Frontend and product-facing interface focus</p>
-          </article>
+          <div class="stats-bento stagger-group" data-stagger>
+            <article class="glass-card metric-card metric-card-primary stagger-item" data-stagger-item>
+              <p class="metric-value">5+</p>
+              <p class="metric-label">Years engineering product-facing systems from React UI to distributed backend services.</p>
+            </article>
 
-          <article class="glass-card metric-card stagger-item" data-stagger-item>
-            <p class="metric-value">Full Stack</p>
-            <p class="metric-label">UI, APIs, auth, data flow, and deployment</p>
-          </article>
+            <article class="glass-card metric-card stagger-item" data-stagger-item>
+              <p class="metric-value">Jio</p>
+              <p class="metric-label">Large-scale platform exposure across Kafka, Spark, reporting layers, and operational data flows.</p>
+            </article>
 
-          <article class="glass-card metric-card stagger-item" data-stagger-item>
-            <p class="metric-value">AI + Cloud</p>
-            <p class="metric-label">Modern workflows, integrations, and scalable delivery</p>
-          </article>
+            <article class="glass-card metric-card stagger-item" data-stagger-item>
+              <p class="metric-value">Typed</p>
+              <p class="metric-label">Strong preference for TypeScript contracts, explicit schemas, and maintainable API boundaries.</p>
+            </article>
+
+            <article class="glass-card metric-card stagger-item" data-stagger-item>
+              <p class="metric-value">AWS</p>
+              <p class="metric-label">Cloud-ready services, CI/CD hardening, and release workflows designed for production pressure.</p>
+            </article>
+
+            <article class="glass-card metric-card metric-card-wide stagger-item" data-stagger-item>
+              <p class="metric-value">Ownership</p>
+              <p class="metric-label">Product discovery, interface systems, backend implementation, and delivery accountability in one execution loop.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -245,10 +279,10 @@
       <div class="container section-shell">
         <header class="section-head">
           <p class="kicker">Experience</p>
-          <h2>Experience across AI products, secure web applications, and platform-scale engineering.</h2>
+          <h2>Engineered across AI products, secure web applications, and platform-scale data systems.</h2>
           <p>
-            My background blends frontend-aware product work, backend systems, data-heavy services,
-            and the practical delivery work that gets software into production.
+            From Jio-scale backend processing to AI-assisted product workflows, I build software that
+            stays readable under iteration and resilient in production.
           </p>
         </header>
 
@@ -262,9 +296,9 @@
               <span>Mar 2025 - Present</span>
             </div>
             <ul class="clean-list">
-              <li>Built AI-powered product workflows and backend services for employee support use cases.</li>
-              <li>Designed RAG and agent orchestration pipelines for grounded, low-latency responses.</li>
-              <li>Shipped cloud-ready APIs and integrations that supported product iteration and deployment.</li>
+              <li>Architected AI-powered support workflows and backend services for product-facing employee experiences.</li>
+              <li>Engineered RAG and agent orchestration pipelines for grounded, low-latency response delivery.</li>
+              <li>Owned cloud-ready APIs and integrations that accelerated release cadence without sacrificing reliability.</li>
             </ul>
           </article>
 
@@ -277,9 +311,9 @@
               <span>Dec 2024 - Mar 2025</span>
             </div>
             <ul class="clean-list">
-              <li>Implemented secure authentication using Spring Boot, Firebase, and JWT.</li>
-              <li>Built onboarding flows and role-based dashboards for internal operational users.</li>
-              <li>Improved release confidence with Dockerized services and GitHub Actions CI/CD.</li>
+              <li>Engineered secure authentication with Spring Boot, Firebase, and JWT-backed session boundaries.</li>
+              <li>Architected onboarding flows and role-based dashboards for internal operational users.</li>
+              <li>Hardened release confidence with Dockerized services and GitHub Actions CI/CD.</li>
             </ul>
           </article>
 
@@ -292,9 +326,9 @@
               <span>Jul 2020 - Dec 2022</span>
             </div>
             <ul class="clean-list">
-              <li>Developed backend modules for JioXplor geospatial intelligence workflows.</li>
-              <li>Processed large location datasets using Kafka, Spark, and distributed services.</li>
-              <li>Delivered reporting layers and insight pipelines that supported business decision-making.</li>
+              <li>Engineered backend modules for JioXplor geospatial intelligence workflows used in platform-scale decision systems.</li>
+              <li>Optimized high-volume location data processing with Kafka, Spark, and distributed service orchestration.</li>
+              <li>Delivered reporting layers and insight pipelines that turned operational data into business-facing decisions.</li>
             </ul>
           </article>
         </div>
@@ -304,82 +338,46 @@
     <section id="focus" class="section" data-reveal>
       <div class="container section-shell">
         <header class="section-head">
-          <p class="kicker">Focus</p>
-          <h2>Selected work stories that show how I think about interfaces, systems, and product impact.</h2>
+          <p class="kicker">Engineering Principles</p>
+          <h2>How I make systems stay fast, stable, and scalable under production pressure.</h2>
           <p>
-            This section is designed to read like a product engineering portfolio, not just a resume dump:
-            each card shows the problem, the build decision, and the outcome.
+            I optimize for architectures that remain legible to engineers, dependable for users, and
+            realistic to ship inside product timelines.
           </p>
         </header>
 
-        <div class="case-grid stagger-group" data-stagger>
-          <article class="glass-card case-card stagger-item" data-stagger-item>
-            <p class="case-eyebrow">Employee Assist AI</p>
-            <h3>AI Workflow Assistant</h3>
-            <p class="case-meta">Product workflow design, orchestration, and grounded response delivery</p>
-            <div class="case-block">
-              <h4>Problem</h4>
-              <p>Teams needed an AI assistant experience that could respond quickly while staying tied to trusted knowledge.</p>
-            </div>
-            <div class="case-block">
-              <h4>Build</h4>
-              <p>Designed RAG-backed workflows and product-ready service integrations for low-latency, reliable AI interactions.</p>
-            </div>
-            <div class="case-block">
-              <h4>Impact</h4>
-              <p>Improved the quality and trustworthiness of employee support interactions while enabling faster product iteration.</p>
-            </div>
-            <div class="case-tags" aria-label="AI workflow assistant tags">
-              <span class="case-tag">AI UX</span>
-              <span class="case-tag">RAG</span>
-              <span class="case-tag">APIs</span>
-            </div>
+        <div class="principles-grid stagger-group" data-stagger>
+          <article class="glass-card principle-card stagger-item" data-stagger-item>
+            <p class="case-eyebrow">Resilience</p>
+            <h3>Write code that survives production pressure.</h3>
+            <p class="case-meta">Failure boundaries, defensive contracts, and observability are designed in, not bolted on later.</p>
+            <ul class="clean-list principle-list">
+              <li>Engineer APIs with explicit contracts, typed validation, and graceful fallbacks.</li>
+              <li>Design service boundaries so incidents stay isolated instead of cascading.</li>
+              <li>Ship instrumentation that makes runtime behavior debuggable under real load.</li>
+            </ul>
           </article>
 
-          <article class="glass-card case-card stagger-item" data-stagger-item>
-            <p class="case-eyebrow">Local Grown Salads</p>
-            <h3>Secure Onboarding Dashboard</h3>
-            <p class="case-meta">Role-based product flows and authentication for internal operations</p>
-            <div class="case-block">
-              <h4>Problem</h4>
-              <p>Internal users needed a secure, scalable workflow for onboarding and access control.</p>
-            </div>
-            <div class="case-block">
-              <h4>Build</h4>
-              <p>Implemented JWT-backed authentication, structured onboarding flows, and dashboard permissions across user roles.</p>
-            </div>
-            <div class="case-block">
-              <h4>Impact</h4>
-              <p>Created a cleaner operational experience and a stronger foundation for future product and team growth.</p>
-            </div>
-            <div class="case-tags" aria-label="Secure onboarding dashboard tags">
-              <span class="case-tag">Auth</span>
-              <span class="case-tag">Dashboards</span>
-              <span class="case-tag">Full Stack</span>
-            </div>
+          <article class="glass-card principle-card stagger-item" data-stagger-item>
+            <p class="case-eyebrow">Performance</p>
+            <h3>Obsess over TTI, LCP, and efficient data fetching.</h3>
+            <p class="case-meta">Fast software feels authoritative. I treat rendering cost, payload shape, and query strategy as product decisions.</p>
+            <ul class="clean-list principle-list">
+              <li>Optimize interface responsiveness with lean state transitions and intentional rendering paths.</li>
+              <li>Reduce backend latency through efficient contracts, caching opportunities, and predictable data access.</li>
+              <li>Audit bottlenecks before they become UX debt hidden behind polished visuals.</li>
+            </ul>
           </article>
 
-          <article class="glass-card case-card stagger-item" data-stagger-item>
-            <p class="case-eyebrow">Jio Platforms</p>
-            <h3>Geospatial Intelligence Platform</h3>
-            <p class="case-meta">Distributed processing, reporting, and business-facing insight delivery</p>
-            <div class="case-block">
-              <h4>Problem</h4>
-              <p>Large-scale location intelligence workflows needed to stay reliable under high-volume processing demands.</p>
-            </div>
-            <div class="case-block">
-              <h4>Build</h4>
-              <p>Developed streaming and processing components with Kafka, Spark, and resilient backend service orchestration.</p>
-            </div>
-            <div class="case-block">
-              <h4>Impact</h4>
-              <p>Enabled better reporting and decision support for business teams using location-driven data products.</p>
-            </div>
-            <div class="case-tags" aria-label="Geospatial intelligence platform tags">
-              <span class="case-tag">Distributed Systems</span>
-              <span class="case-tag">Data Pipelines</span>
-              <span class="case-tag">Reporting</span>
-            </div>
+          <article class="glass-card principle-card stagger-item" data-stagger-item>
+            <p class="case-eyebrow">Scalability</p>
+            <h3>Build systems that grow without technical debt becoming the product.</h3>
+            <p class="case-meta">Scale is not only throughput. It is whether new engineers, new features, and new data flows can fit the architecture cleanly.</p>
+            <ul class="clean-list principle-list">
+              <li>Model systems with extensible abstractions instead of one-off feature branches.</li>
+              <li>Prefer typed, testable seams that let frontend and backend evolve independently.</li>
+              <li>Architect delivery pipelines that support repeatable releases instead of heroics.</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -389,10 +387,10 @@
       <div class="container section-shell">
         <header class="section-head">
           <p class="kicker">Selected Work</p>
-          <h2>A mix of private product builds, full-stack application work, and technical projects.</h2>
+          <h2>Product builds and technical systems that show architectural range, not just visual polish.</h2>
           <p>
-            The goal here is to show range: React-style product surfaces, secure app flows,
-            backend and AI systems, and real delivery experience across web and cloud stacks.
+            Each card highlights the build surface, the system decision behind it, and the technical
+            challenge that made the work materially harder than a standard portfolio demo.
           </p>
         </header>
 
@@ -428,6 +426,10 @@
             <div class="project-meta">
               <h3>AI Expense Intelligence Copilot</h3>
               <p>React, FastAPI, SQLAlchemy, and retrieval-backed finance workflows for ingestion, analytics dashboards, and grounded Copilot responses.</p>
+              <div class="project-challenge">
+                <p class="project-challenge-label">Technical Challenge</p>
+                <p>Normalized multi-format uploads and constrained retrieval context so financial Q&amp;A stayed fast, grounded, and auditable across messy source data.</p>
+              </div>
             </div>
           </article>
 
@@ -454,6 +456,10 @@
             <div class="project-meta">
               <h3>AI Workflow Hub</h3>
               <p>Software engineering for product workflows, backend orchestration, and AI-assisted user experiences.</p>
+              <div class="project-challenge">
+                <p class="project-challenge-label">Technical Challenge</p>
+                <p>Engineered orchestration boundaries that kept LLM workflows responsive while preserving source trust and backend observability.</p>
+              </div>
             </div>
           </article>
 
@@ -480,6 +486,10 @@
             <div class="project-meta">
               <h3>Secure Operations Dashboard</h3>
               <p>Full-stack application work centered on onboarding flows, role control, and release reliability.</p>
+              <div class="project-challenge">
+                <p class="project-challenge-label">Technical Challenge</p>
+                <p>Hardened JWT-based access control across multi-role onboarding states without letting security rules fracture the user flow.</p>
+              </div>
             </div>
           </article>
 
@@ -497,6 +507,10 @@
             <div class="project-meta">
               <h3>House Prices Advanced Regression</h3>
               <p>Python, model experimentation, analytics workflows, and practical ML project structure.</p>
+              <div class="project-challenge">
+                <p class="project-challenge-label">Technical Challenge</p>
+                <p>Engineered a feature-selection and validation pipeline that kept regression accuracy stable across noisy housing attributes.</p>
+              </div>
             </div>
           </article>
 
@@ -514,6 +528,10 @@
             <div class="project-meta">
               <h3>Wine Quality Prediction Engine</h3>
               <p>AWS EC2, parallel execution, backend ML services, and cloud experimentation workflows.</p>
+              <div class="project-challenge">
+                <p class="project-challenge-label">Technical Challenge</p>
+                <p>Parallelized model execution on EC2 so experimentation throughput improved without turning the pipeline into an infrastructure puzzle.</p>
+              </div>
             </div>
           </article>
 

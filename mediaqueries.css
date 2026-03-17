@@ -5,6 +5,8 @@
 
   .hero-grid,
   .about-layout,
+  .about-bento,
+  .stats-bento,
   .publication-layout,
   .skills-layout,
   .contact-layout {
@@ -28,15 +30,44 @@
     margin-top: var(--space-3);
   }
 
-  .header-resume {
+  .site-nav {
     display: none;
+  }
+
+  .menu-toggle {
+    display: grid;
   }
 
   .metric-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .about-bento,
+  .stats-bento {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .about-panel-primary,
+  .impact-panel {
+    grid-column: span 6;
+  }
+
+  .about-bento .quick-card,
+  .about-bento .trust-panel,
+  .metric-card,
+  .metric-card-primary {
+    grid-column: span 3;
+  }
+
+  .metric-card-wide {
+    grid-column: span 6;
+  }
+
   .case-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .principles-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -58,17 +89,13 @@
     padding: var(--space-9) 0;
   }
 
-  .site-nav {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: grid;
-    margin-right: 4.8rem;
-  }
-
   .header-inner {
     min-height: 4.75rem;
+    gap: var(--space-4);
+  }
+
+  .header-actions {
+    gap: var(--space-2);
   }
 
   .timeline-item {
@@ -82,7 +109,7 @@
 
 @media (max-width: 760px) {
   :root {
-    --toggle-top: 0.82rem;
+    --toggle-bottom: 1rem;
     --toggle-right: 0.92rem;
   }
 
@@ -92,6 +119,52 @@
 
   .hero {
     padding-top: var(--space-9);
+  }
+
+  .header-inner {
+    min-height: 4.45rem;
+    gap: var(--space-3);
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .header-actions-divider {
+    height: 1.55rem;
+    opacity: 0.34;
+  }
+
+  .header-resume {
+    min-height: 2.5rem;
+    padding: 0.56rem 0.82rem;
+    font-size: 0.82rem;
+  }
+
+  .header-resume-full {
+    display: none;
+  }
+
+  .header-resume-short {
+    display: inline;
+  }
+
+  .theme-toggle {
+    padding: 0.2rem 0.24rem;
+  }
+
+  .toggle-track {
+    width: 2.9rem;
+    height: 1.68rem;
+  }
+
+  .toggle-thumb {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  html[data-theme="dark"] .toggle-thumb {
+    transform: translateX(1.18rem);
   }
 
   .hero-copy h1 {
@@ -104,8 +177,25 @@
 
   .about-cards,
   .metric-strip,
-  .case-grid {
+  .case-grid,
+  .principles-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-bento,
+  .stats-bento,
+  .badge-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-panel-primary,
+  .impact-panel,
+  .about-bento .quick-card,
+  .about-bento .trust-panel,
+  .metric-card,
+  .metric-card-primary,
+  .metric-card-wide {
+    grid-column: auto;
   }
 
   .hero-actions .btn {
@@ -158,22 +248,34 @@
     display: none;
   }
 
-  .menu-toggle {
-    margin-right: 4.35rem;
+  .header-actions {
+    gap: 0.42rem;
+  }
+
+  .header-actions-divider {
+    display: none;
+  }
+
+  .header-resume {
+    padding-inline: 0.72rem;
+  }
+
+  .theme-toggle {
+    padding: 0.18rem 0.22rem;
   }
 
   .toggle-track {
-    width: 3.5rem;
-    height: 1.85rem;
+    width: 2.72rem;
+    height: 1.56rem;
   }
 
   .toggle-thumb {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.08rem;
+    height: 1.08rem;
   }
 
   html[data-theme="dark"] .toggle-thumb {
-    transform: translateX(1.58rem);
+    transform: translateX(1.08rem);
   }
 
   .hero-description,
